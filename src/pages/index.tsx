@@ -1,12 +1,11 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import { Navbar } from "../components/molecules/Navbar";
-import { Footer } from "../components/molecules/Footer";
 import { Brands } from "../components/molecules/Brands";
-import { Hero } from "../components/molecules/Hero";
+import { OurServices } from "../components/molecules/OurServices";
 import { Products } from "../components/molecules/Products";
-import { Video } from '../components/atoms/Video';
-import { Contact } from '../components/molecules/Contact';
+import { Video } from "../components/atoms/Video";
+import { Contact } from "../components/molecules/Contact";
+import { Hero } from "../components/molecules/Hero";
 
 const Home: NextPage = () => {
   return (
@@ -16,17 +15,15 @@ const Home: NextPage = () => {
         <meta name="description" content="Docutec mdp" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
-        <Navbar />
-        <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#000d51] to-[#15162c]">
-          <Hero />
-          <Brands />
-          <Products />
-          <Video src="/assets/hero.mp4" />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
+
+      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#000d51] to-[#15162c]">
+        <Hero />
+        <Brands />
+        <OurServices />
+        <Products />
+        <Video src="/assets/hero.mp4" />
+        <Contact />
+      </main>
     </>
   );
 };

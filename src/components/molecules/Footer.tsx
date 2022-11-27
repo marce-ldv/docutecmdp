@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className="rounded-lg bg-white p-4 shadow dark:bg-gray-900 md:px-6 md:py-8">
+    <footer className="bg-white p-4 shadow dark:bg-gray-900 md:px-6 md:py-8 w-full bottom-0">
       <div className="sm:flex sm:items-center sm:justify-between">
         <a
           href="https://flowbite.com/"
