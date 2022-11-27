@@ -5,6 +5,8 @@ import { Footer } from "../components/molecules/Footer";
 import { Brands } from "../components/molecules/Brands";
 import { Hero } from "../components/molecules/Hero";
 import { Products } from "../components/molecules/Products";
+import { Video } from '../components/atoms/Video';
+import { Contact } from '../components/molecules/Contact';
 
 const Home: NextPage = () => {
   return (
@@ -20,6 +22,8 @@ const Home: NextPage = () => {
           <Hero />
           <Brands />
           <Products />
+          <Video src="/assets/hero.mp4" />
+          <Contact />
         </main>
         <Footer />
       </div>
