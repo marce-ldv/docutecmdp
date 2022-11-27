@@ -6,6 +6,7 @@ export const Footer = () => {
           href="https://flowbite.com/"
           className="mb-4 flex items-center sm:mb-0"
         >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/assets/logo.png"
             className="mr-3 h-8"

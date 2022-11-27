@@ -10,7 +10,7 @@ export const Products = () => {
             {[...Array(10)].map((product) => (
               <Card
                 key={uid()}
-                title={"iphone XS"}
+                title={"Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport"}
                 description={
                   "The Apple iPhone XS is available in 3 colors with 64GB memory. Shoot amazing videos"
                 }

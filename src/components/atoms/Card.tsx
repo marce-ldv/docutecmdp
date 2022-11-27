@@ -2,30 +2,31 @@ import type { FC } from "react";
 
 export interface CardProps {
   title: string;
-  description: string;
-  btnLabel: string;
+  description?: string;
   image: string;
+  btnLabel?: string;
 }
 
 export const Card: FC<CardProps> = ({
   title,
-  description,
-  btnLabel,
+  // description,
+  btnLabel = 'Ver producto',
   image,
 }) => {
   return (
     <div className="w-full max-w-sm rounded-lg bg-white shadow-md dark:border-gray-700 dark:bg-gray-700">
       <a href="#">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           className="rounded-t-lg p-8"
-          src="https://flowbite.com/docs/images/blog/image-1.jpg"
+          src={image}
           alt="product image"
         />
       </a>
       <div className="px-5 pb-5">
         <a href="#">
           <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-            Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
+            {title}
           </h5>
         </a>
         <div className="mt-2.5 mb-5 flex items-center">
@@ -91,7 +92,7 @@ export const Card: FC<CardProps> = ({
             href="#"
             className="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
-            Ver producto
+            {btnLabel}
           </a>
         </div>
       </div>

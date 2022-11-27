@@ -3,6 +3,7 @@ export const Navbar = () => {
     <nav className="rounded border-gray-200 bg-white px-2 py-2.5 dark:bg-gray-900 sm:px-4">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
         <a href="https://flowbite.com/" className="flex items-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/assets/logo.png"
             className="mr-3 h-6 sm:h-9"
