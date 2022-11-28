@@ -1,34 +1,15 @@
-import { Suspense } from 'react';
-import Model from '../atoms/Model';
-import { OrbitControls } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
-
-const Model3d = () => {
-  return (
-    <Canvas
-      camera={{ position: [2, 0, 12.25], fov: 15 }}
-    >
-      <ambientLight intensity={1.25} />
-      <ambientLight intensity={0.1} />
-      <directionalLight intensity={0.4} />
-      <Suspense fallback={null}>
-        <Model position={[0.025, -0.9, 0]} />
-      </Suspense>
-      <OrbitControls />
-    </Canvas>
-  )
-}
+import { ModelFBX } from '../atoms/ModelFBX';
 
 export const Hero = () => {
   return (
-    <section className="relative overflow-hidden w-full">
+    <section className="relative w-full overflow-hidden">
       <div className="pt-10 pb-14 sm:pt-16 lg:overflow-hidden lg:pt-24 lg:pb-24">
         <div className="mx-auto max-w-5xl lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8">
             <div className="mx-auto max-w-md px-4 text-center sm:max-w-2xl sm:px-6 lg:flex lg:items-center lg:px-0 lg:text-left">
               <div className="lg:py-24">
                 <h1 className="mt-4 text-4xl font-bold tracking-tighter text-black sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                  <span className="block text-red-600">Docutec  </span>
+                  <span className="block text-red-600">Docutec</span>
                   <span className="block text-gray-300">Servicio tecnico</span>
                 </h1>
                 <p className="mt-3 text-base text-gray-400 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
@@ -78,7 +59,8 @@ export const Hero = () => {
               </div>
             </div>
             <div className="mt-12 hidden lg:block">
-              <Model3d />
+              {/*position={[0.025, -0.9, 0]}*/}
+              <ModelFBX />
             </div>
           </div>
         </div>
