@@ -1,3 +1,24 @@
+import { Suspense } from 'react';
+import Model from '../atoms/Model';
+import { OrbitControls } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+
+const Model3d = () => {
+  return (
+    <Canvas
+      camera={{ position: [2, 0, 12.25], fov: 15 }}
+    >
+      <ambientLight intensity={1.25} />
+      <ambientLight intensity={0.1} />
+      <directionalLight intensity={0.4} />
+      <Suspense fallback={null}>
+        <Model position={[0.025, -0.9, 0]} />
+      </Suspense>
+      <OrbitControls />
+    </Canvas>
+  )
+}
+
 export const Hero = () => {
   return (
     <section className="relative overflow-hidden w-full">
@@ -57,11 +78,7 @@ export const Hero = () => {
               </div>
             </div>
             <div className="mt-12 hidden lg:block">
-              <img
-                className=""
-                src="https://user-images.githubusercontent.com/1884712/202186141-9f8a93e1-7743-459a-bc95-b1d826931624.png"
-                alt=""
-              />
+              <Model3d />
             </div>
           </div>
         </div>
