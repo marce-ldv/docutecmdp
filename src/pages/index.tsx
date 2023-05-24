@@ -16,13 +16,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#000d51] to-[#15162c]">
+      {/*<main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#000d51] to-[#15162c]">*/}
+      <main className="bg-gradient-to-b from-[#000d51] to-[#15162c]">
         <Hero />
-        <Brands />
+        {/*<Brands />*/}
         <OurServices />
         <Products />
-        <Video src="/assets/hero.mp4" />
-        <Contact />
+        {/*<Video src="/assets/hero.mp4" />*/}
+        {/*<Contact />*/}
       </main>
     </>
   );
